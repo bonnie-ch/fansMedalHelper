@@ -261,7 +261,6 @@ class BiliUser:
             tasks.append(self.sendDanmaku())
             tasks.append(self.signInGroups())
             await asyncio.gather(*tasks)
-        # await self.session.close()
 
     async def sendmsg(self):
         if not self.isLogin:
